@@ -1,0 +1,182 @@
+/* ── Sidebar ───────────────────────────────────────────────────────────────── */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+  transition: transform var(--transition);
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg) var(--space-md);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.sidebar__logo-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sidebar__logo-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.3px;
+}
+
+/* Close button — only shown on mobile */
+.sidebar__close {
+  color: var(--sidebar-text);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: none; /* hidden on desktop */
+}
+.sidebar__close:hover { background: rgba(255,255,255,0.1); }
+
+/* ── Navigation ────────────────────────────────────────────────────────────── */
+.sidebar__nav {
+  flex: 1;
+  padding: var(--space-md) var(--space-sm);
+  overflow-y: auto;
+}
+
+.sidebar__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar__nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 10px var(--space-md);
+  border-radius: var(--radius-sm);
+  color: var(--sidebar-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+.sidebar__nav-link:hover {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+}
+.sidebar__nav-link--active {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-active-text);
+}
+
+.sidebar__nav-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Footer ────────────────────────────────────────────────────────────────── */
+.sidebar__footer {
+  padding: var(--space-md);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.sidebar__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.sidebar__user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar__user-role {
+  font-size: 0.75rem;
+  color: var(--sidebar-text);
+  text-transform: capitalize;
+}
+
+.sidebar__logout {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px var(--space-md);
+  border-radius: var(--radius-sm);
+  color: var(--sidebar-text);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  width: 100%;
+}
+.sidebar__logout:hover {
+  background: rgba(239,68,68,0.15);
+  color: #fca5a5;
+}
+
+/* ── Overlay (mobile) ──────────────────────────────────────────────────────── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 199;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%); /* hidden off-screen by default */
+  }
+  .sidebar--open {
+    transform: translateX(0); /* slide in when open */
+  }
+  .sidebar__close {
+    display: flex; /* show close button on mobile */
+  }
+  .sidebar-overlay {
+    display: block; /* show overlay on mobile when sidebar is open */
+  }
+}

@@ -1,0 +1,79 @@
+/* ── Confirm Dialog ────────────────────────────────────────────────────────── */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100; /* above other modals */
+  padding: var(--space-md);
+  animation: fadeIn 0.15s ease;
+}
+
+.confirm-dialog {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.2s ease;
+}
+
+.confirm-dialog__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.confirm-dialog__icon--danger  { background: #fef2f2; color: var(--color-danger); }
+.confirm-dialog__icon--primary { background: var(--color-primary-light); color: var(--color-primary); }
+
+.confirm-dialog__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+}
+
+.confirm-dialog__message {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.confirm-dialog__actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+}
+
+.confirm-dialog__actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Solid danger button — used inside confirm dialogs */
+.confirm-dialog__actions .btn--danger {
+  background: var(--color-danger);
+  color: #fff;
+  border: 1px solid var(--color-danger);
+}
+.confirm-dialog__actions .btn--danger:hover:not(:disabled) {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Small spinner for inside buttons */
+.btn-spinner--sm {
+  width: 14px;
+  height: 14px;
+  border-width: 2px;
+}
