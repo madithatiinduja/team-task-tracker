@@ -21,8 +21,8 @@
 |---------|-----|
 | 🖥️ Frontend (Vercel) | [team-task-tracker-frontend.vercel.app](https://team-task-tracker-frontend.vercel.app) |
 | ⚙️ Backend API (Render) | [team-task-tracker-backend-9ugk.onrender.com](https://team-task-tracker-backend-9ugk.onrender.com) |
-| 📁 Frontend Repository | [github.com/Kajal-ctrlF/team-task-tracker-frontend](https://github.com/Kajal-ctrlF/team-task-tracker-frontend) |
-| 📁 Backend Repository | [github.com/Kajal-ctrlF/team-task-tracker-backend](https://github.com/Kajal-ctrlF/team-task-tracker-backend) |
+| 📁 Frontend Repository | [github.com/madithatiinduja/team-task-tracker](https://github.com/madithatiinduja/team-task-tracker) |
+| 📁 Backend Repository | [github.com/madithatiinduja/team-task-tracker-backend](https://github.com/madithatiinduja/team-task-tracker-backend) |
 
 > **Note:** The backend is hosted on Render's free tier. The first request may take 30–60 seconds to wake up the server.
 
@@ -575,9 +575,8 @@ team-task-tracker/
 
 ## 👩‍💻 Author
 
-**Kajal Patel**
+**Madithati Induja**
 
-[![GitHub](https://img.shields.io/badge/GitHub-Kajal--ctrlF-181717?style=flat&logo=github)](https://github.com/Kajal-ctrlF)
 
 ---
 
@@ -587,8 +586,3 @@ This project is built for educational and internship demonstration purposes.
 
 ---
 
-<div align="center">
-
-Made with ❤️ using the MERN Stack
-
-</div>
