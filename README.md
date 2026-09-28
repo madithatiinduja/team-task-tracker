@@ -19,7 +19,7 @@
 
 | Service | URL |
 |---------|-----|
-| 🖥️ Frontend (Vercel) | [team-task-tracker-frontend.vercel.app](https://team-task-tracker-ic68ney00-madithati-indujas-projects.vercel.app) |
+| 🖥️ Frontend (Vercel) | [team-task-tracker-frontend.vercel.app](https://team-task-tracker-rho.vercel.app/) |
 | ⚙️ Backend API (Render) | [team-task-tracker-backend-9ugk.onrender.com](https://team-task-tracker-backend-xbby.onrender.com) |
 | 📁 Frontend Repository | [github.com/madithatiinduja/team-task-tracker](https://github.com/madithatiinduja/team-task-tracker) |
 | 📁 Backend Repository | [github.com/madithatiinduja/team-task-tracker-backend](https://github.com/madithatiinduja/team-task-tracker-backend) |
